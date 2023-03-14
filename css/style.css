@@ -16,6 +16,10 @@ img {
 }
 
 /* @main */
+.content {
+    height: 100%;
+    width: 80%;
+}
 .picture {
     height: 100%;
     width: 100%;
@@ -31,8 +35,8 @@ img {
 }
 /* @sidebar */
 .sidebar {
-    /* width: 20%; */
-    /* height: 100%; */
+    width: 20%;
+    height: 100%;
     position: relative;
 }
 /* #preview */
