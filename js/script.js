@@ -11,15 +11,26 @@ for (let i = 0; i < pictureArray.length; i++) {
 }
 // get picture element
 const itemsArray = document.getElementsByClassName("picture")
-// set default active class to single picture element
-let activePictureIndex = 3;
+// set default active class to  a single picture element
+let activePictureIndex = 0;
 console.log(itemsArray[activePictureIndex]);
 itemsArray[activePictureIndex].classList.add("active");
-
-
-// !LOGIC
-chevronUp.addEventListener("click", function(){
-
+// change picture on click
+chevronDown.addEventListener("click", function(){
+    itemsArray[activePictureIndex].classList.remove("active");
+    activePictureIndex++;
+    itemsArray[activePictureIndex].classList.add("active");
+    if(activePictureIndex === itemsArray.length - 1){
+        // itemsArray[activePictureIndex].classList.remove("active");
+        // pictureArray.unshift(pictureArray[activePictureIndex]);
+        // activePictureIndex = 0;
+        // itemsArray[activePictureIndex].classList.add("active");
+        // pictureArray.pop();
+        // console.log(pictureArray);
+    }
 })
-
-// !OUTPUT
+chevronUp.addEventListener("click", function(){
+    itemsArray[activePictureIndex].classList.remove("active");
+    activePictureIndex--;
+    itemsArray[activePictureIndex].classList.add("active");
+})
